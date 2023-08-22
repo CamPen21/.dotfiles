@@ -1,0 +1,8 @@
+# Aliases
+
+# Neovim
+alias vim="nvim"
+export EDITOR="nvim"
+
+# Dotfiles
+alias dotfiles='/usr/bin/git --git-dir=/Users/camilo/.dotfiles/ --work-tree=/Users/camilo'

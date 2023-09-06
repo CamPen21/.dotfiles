@@ -5,4 +5,9 @@ alias vim="nvim"
 export EDITOR="nvim"
 
 # Dotfiles
-alias dotfiles='/usr/bin/git --git-dir=/Users/camilo/.dotfiles/ --work-tree=/Users/camilo'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Octavia
+OCTAVIA_ENV_FILE=/Users/camilo/.octavia
+export OCTAVIA_ENABLE_TELEMETRY=False
+alias octavia="docker run -i --rm -v \$(pwd):/home/octavia-project --network host --env-file \${OCTAVIA_ENV_FILE} --user \$(id -u):\$(id -g) airbyte/octavia-cli:0.44.4"

@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+dirs=(
+    ~/Personal
+    ~/Projects
+    ~
+)
+
+if [[ $# -eq 1 ]]; then
+    selected=$1
+else
+    selected=$(find ${dirs[@]} -mindepth 1 -maxdepth 1 -type d | grep -v "\/\." | fzf)
+fi
+
+
+if [[ -z $selected ]]; then
+    exit 0
+fi
+
+branch_name=$(basename $selected)
+session_name=$(tmux display-message -p "#S")
+clean_name=$(echo $branch_name | tr "./" "__")
+target="$session_name:$clean_name"
+
+if ! tmux has-session -t $target 2> /dev/null; then
+    tmux neww -dn $clean_name -c $selected -a
+fi
+
+tmux switch-client -t $target

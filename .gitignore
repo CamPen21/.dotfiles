@@ -1,0 +1,6 @@
+# No need to track this files
+.config/pgcli
+.config/configstore
+.config/gh
+# No need to track this file
+.config/nvim/plugin/packer_compiled.lua

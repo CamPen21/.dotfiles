@@ -13,4 +13,6 @@ export PATH="$PATH:$GOPATH/bin"
 
 # NVM commands
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    source $(brew --prefix nvm)/nvm.sh
+fi

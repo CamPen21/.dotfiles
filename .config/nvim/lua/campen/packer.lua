@@ -9,10 +9,10 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {
-	  "loctvl842/monokai-pro.nvim",
-	  config = function()
-		  require("monokai-pro").setup()
-	  end
+	  "folke/tokyonight.nvim",
+      lazy = false,
+      priority = 1000,
+      opts = {},
   }
   use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use ('nvim-treesitter/playground')

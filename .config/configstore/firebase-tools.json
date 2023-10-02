@@ -1,0 +1,54 @@
+{
+	"motd": {
+		"cloudBuildErrorAfter": 1594252800000,
+		"cloudBuildWarnAfter": 1590019200000,
+		"defaultNode10After": 1594252800000,
+		"minVersion": "3.0.5",
+		"node8DeploysDisabledAfter": 1613390400000,
+		"node8RuntimeDisabledAfter": 1615809600000,
+		"node8WarnAfter": 1600128000000,
+		"fetched": 1693492874385
+	},
+	"adminsdkconfig": {
+		"floc-3d6b1": {
+			"projectId": "floc-3d6b1",
+			"databaseURL": "https://floc-3d6b1.firebaseio.com",
+			"storageBucket": "floc-3d6b1.appspot.com",
+			"locationId": "us-central"
+		},
+		"floc-dev": {
+			"projectId": "floc-dev",
+			"storageBucket": "floc-dev.appspot.com",
+			"locationId": "us-east1"
+		}
+	},
+	"activeProjects": {
+		"/Users/camilo/development/general/Adaviv/Projects/analytics-integration": "production"
+	},
+	"additionalAccounts": [],
+	"activeAccounts": {},
+	"analytics-uuid": "972a1618-0ed6-40b1-9db7-9ba1edb1d2c6",
+	"usage": true,
+	"user": {
+		"iss": "accounts.google.com",
+		"azp": "563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com",
+		"aud": "563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com",
+		"sub": "102288049895775317929",
+		"hd": "adaviv.com",
+		"email": "camilo@adaviv.com",
+		"email_verified": true,
+		"at_hash": "xpMo0R-1hPlgAgORnp8KCA",
+		"iat": 1691679278,
+		"exp": 1691682878
+	},
+	"tokens": {
+		"expires_at": 1693496472990,
+		"refresh_token": "1//06USls2LS8FkfCgYIARAAGAYSNgF-L9Ir921OrT6r2drCvECcFei0dxd3BT-ILW6dU6ttedKd-3i3tSYE2SUQE5tMFCKoj4L5wA",
+		"scopes": [],
+		"access_token": "ya29.a0AfB_byD0G_LLhlxxwjQ4i1RvKsCiRuHKK6JyM1EB9vhLvD_ZZwvwuCvo1iFXzt0LPRUbfjsD9Q064EIN1qbAsLSM8ftqh1dclz6SajyCzEsNRrz343s4K2m0GFGyqJwyiRLrlHkzgE6ldFdRlV1gSx0wxCujUkcSpjZh4hjgNrQSArAaCgYKAcgSARISFQHsvYls0RbD2YzHPBanmpZ6_RJAlA0182",
+		"expires_in": 3599,
+		"scope": "https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/cloud-platform openid",
+		"token_type": "Bearer",
+		"id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImM3ZTExNDEwNTlhMTliMjE4MjA5YmM1YWY3YTgxYTcyMGUzOWI1MDAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNTYzNTg0MzM1ODY5LWZncmhnbWQ0N2JxbmVraWo1aThiNXByMDNobzg0OWU2LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNTYzNTg0MzM1ODY5LWZncmhnbWQ0N2JxbmVraWo1aThiNXByMDNobzg0OWU2LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTAyMjg4MDQ5ODk1Nzc1MzE3OTI5IiwiaGQiOiJhZGF2aXYuY29tIiwiZW1haWwiOiJjYW1pbG9AYWRhdml2LmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoiNGRQeERoLWNCWDZTVDlFRWk5Zm93USIsImlhdCI6MTY5MzQ5Mjg3MywiZXhwIjoxNjkzNDk2NDczfQ.bj6Uwwr23RvYlzC0CCsgC8sQyYZrfLgxVUp9Ktxn1y7Hg-hOCIYyjof8WNDiOY6K2pBjAdtzF4uCpMxMwGyYE7DAXaiKfJeb5pjxQcFp6P_2sUhsmRBYp5sVuN5hLmVGWJYCKKa_UIqC1TV2culWg4u4zENQL4R6FinGK253s5ZqnWhziZzBUiFPErHfOhtbkRsRXJxX9pCiizER6jgkNAm3JwPRjjJ_dPAkM2t4R0H2yiUDxN8-nYp1uSZ0PyhDuSNnLNYecbaSvHp0k7-OU4xQTjEf53AS1KO_iy_XaFwXXidQH2GiiH6hzmLVbzxhof2y9w67sWFel-7Ttw5mOg"
+	}
+}

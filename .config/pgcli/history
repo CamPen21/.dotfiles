@@ -1,0 +1,267 @@
+
+# 2023-09-23 20:14:24.998710
++\i db.sql
+
+# 2023-09-23 20:14:53.266622
++uuid_generate_v4()
+
+# 2023-09-23 20:15:07.615386
++SELECT uuid_generate_v4();
+
+# 2023-09-23 20:15:24.319655
++CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+# 2023-09-23 20:15:28.496310
++SELECT uuid_generate_v4();
+
+# 2023-09-23 20:15:32.216336
++\i db.sql
+
+# 2023-09-23 20:16:36.368926
++\d
+
+# 2023-09-23 20:18:43.976397
++SELECT * FROM answer;
+
+# 2023-09-23 20:19:04.697601
++exit
+
+# 2023-09-23 20:38:02.632550
++\d
+
+# 2023-09-23 20:38:53.821176
++SELECT * FROM chapter;
+
+# 2023-09-23 20:42:46.630776
++INSERT INTO chapter(title) VALUES ('chapter 1'), ('chapter 2')
+
+# 2023-09-23 20:42:49.063161
++SELECT * FROM chapter;
+
+# 2023-09-23 20:45:03.325954
++INSERT INTO question(chapter_id, prompt, type) VALUES ('a455c063-b3da-4c4a-b92f-5433392de4a5', 'How do you perform CPR?', 'radio'), ('a455c063-b3da-4c4a-b92f-5433392de4a5', 'How do you revive someone?', 'radio')
+
+# 2023-09-23 20:49:31.406129
++SELECT * FROM question;
+
+# 2023-09-23 21:26:54.135904
++INSERT INTO question(chapter_id, prompt, type) VALUES ('a455c063-b3da-4c4a-b92f-5433392de4a5', 'How do you perform CPR?', 'radio'), ('a455c063-b3da-4c4a-b92f-5433392de4a5', 'How do you revive someone?', 'radio')
+
+# 2023-09-23 21:27:05.307956
++SELECT * FROM question;
+
+# 2023-09-23 21:28:55.406395
++INSERT INTO answer(question_id, content, correct) 
++VALUES ('', 'Applying pressure in the chest', 'y'), 
++('', 'Applying pressure in the head', 'n'),
++('', 'Applying pressure in the arm', 'n'),
++('', 'Applying pressure in the back', 'n')
+
+# 2023-09-23 21:29:46.747358
++INSERT INTO answer(question_id, content, correct) 
++VALUES ('8da60747-ff98-42cf-a7d7-a232df3f53a8', 'Applying pressure in the chest', 'y'), 
++('8da60747-ff98-42cf-a7d7-a232df3f53a8', 'Applying pressure in the head', 'n'),
++('8da60747-ff98-42cf-a7d7-a232df3f53a8', 'Applying pressure in the arm', 'n'),
++('8da60747-ff98-42cf-a7d7-a232df3f53a8', 'Applying pressure in the back', 'n')
+
+# 2023-09-23 21:30:13.537424
++\d answer
+
+# 2023-09-23 21:30:43.026861
++ALTER TABLE answer COLUMN answer_id RENAME question_id
+
+# 2023-09-23 21:31:15.089113
++ALTER TABLE answer RENAME COLUMN answer_id TO question_id;
+
+# 2023-09-23 21:31:22.458470
++INSERT INTO answer(question_id, content, correct) 
++VALUES ('8da60747-ff98-42cf-a7d7-a232df3f53a8', 'Applying pressure in the chest', 'y'), 
++('8da60747-ff98-42cf-a7d7-a232df3f53a8', 'Applying pressure in the head', 'n'),
++('8da60747-ff98-42cf-a7d7-a232df3f53a8', 'Applying pressure in the arm', 'n'),
++('8da60747-ff98-42cf-a7d7-a232df3f53a8', 'Applying pressure in the back', 'n')
+
+# 2023-09-23 21:31:38.850327
++SELECT * FROM question;
+
+# 2023-09-23 21:31:47.787209
++SELECT * FROM answer;
+
+# 2023-09-23 21:32:54.869197
++SELECT * FROM answer WHERE correct = True;
+
+# 2023-09-23 21:34:12.906910
++SELECT * FROM chapter;
+
+# 2023-09-23 21:45:06.354450
++SELECT id, type, prompt FROM question WHERE id = '79c21584-d4b3-4ee4-afe7-d4563aa87e71'
+
+# 2023-09-23 21:53:39.053463
++SELECT id, type, prompt FROM question WHERE id = 'eff5a449-9f92-44f5-8263-be81811380fb'
+
+# 2023-09-23 21:53:44.425855
++SELECT id, type, prompt FROM question WHERE id = 'eff5a449-9f92-44f5-8263-be81811380fb';
+
+# 2023-09-24 13:35:06.321681
++\q
+
+# 2023-09-24 13:55:43.825819
++\d
+
+# 2023-09-24 13:55:47.007691
++\q
+
+# 2023-09-24 16:01:53.869381
++\d
+
+# 2023-09-24 16:01:57.815168
++\d chapter
+
+# 2023-09-24 16:02:14.411901
++SELECT * FROM chapter;
+
+# 2023-09-24 16:04:55.933534
++UPDATE chapter SET title = 'The evolution of nursing' WHERE id = 'a455c063-b3da-4c4a-b92f-5433392de4a5';
+
+# 2023-09-24 16:06:33.605525
++UPDATE chapter SET title = 'Legal and Ethical Aspects of Nursing' WHERE id = '94e7660c-2289-409e-ac2f-041fad573a6c';
+
+# 2023-09-24 16:10:58.801787
++\q
+
+# 2023-09-25 21:44:23.664363
++ALTER TABLE question ADD COLUMN rationale TEXT NOT NULL;
+
+# 2023-09-25 21:44:39.703271
++ALTER TABLE question ADD COLUMN rationale TEXT NOT NULL DEFAULT = "";
+
+# 2023-09-25 21:44:44.458957
++ALTER TABLE question ADD COLUMN rationale TEXT NOT NULL DEFAULT = '';
+
+# 2023-09-25 21:46:10.261274
++ALTER TABLE question ADD COLUMN rationale TEXT NOT NULL CONSTRAINT df_val DEFAULT '';
+
+# 2023-09-25 21:46:51.431667
++\d question
+
+# 2023-09-25 21:47:34.841194
++ALTER TABLE answer DROP CONSTRAINT df_val
+
+# 2023-09-25 21:48:36.472214
++\d+ answer
+
+# 2023-09-25 21:48:47.996737
++\d+ question
+
+# 2023-09-25 21:49:44.920880
++ALTER TABLE question ALTER COLUMN rationale DROP DEFAULT;
+
+# 2023-09-25 21:49:48.417610
++\d+ question
+
+# 2023-09-25 21:49:57.873711
++SELECT * FROM question;
+
+# 2023-09-25 21:50:11.088843
++\q
+
+# 2023-09-27 16:08:14.913107
++\d
+
+# 2023-09-27 16:12:15.315969
++\i db.sql
+
+# 2023-09-27 16:12:17.654273
++ls
+
+# 2023-09-27 16:12:36.604935
++\q
+
+# 2023-09-27 16:12:55.679371
++\i db.sql
+
+# 2023-09-27 16:13:40.177708
++\d
+
+# 2023-09-27 16:13:47.621271
++\q
+
+# 2023-09-27 18:59:54.897256
++SELECT * FROM chapter;
+
+# 2023-09-27 19:00:18.479495
++SELECT * FROM question;
+
+# 2023-09-27 19:01:07.096154
++DELETE FROM chapter;
+
+# 2023-09-27 19:01:28.157030
++DELETE FROM answer;
+
+# 2023-09-27 19:01:32.921525
++DELETE FROM question;
+
+# 2023-09-27 19:01:38.351693
++DELETE FROM chapter;
+
+# 2023-09-27 19:07:16.648941
++SELECT * FROM question;
+
+# 2023-09-27 19:07:28.080185
++DELETE FROM answer;
+
+# 2023-09-27 19:07:33.450310
++DELETE FROM question;
+
+# 2023-09-27 19:07:36.035786
++DELETE FROM chapter;
+
+# 2023-09-27 19:08:09.594167
++SELECT * FROM chapter;
+
+# 2023-09-27 19:09:31.558751
++DELETE FROM answer;
+
+# 2023-09-27 19:09:36.276872
++DELETE FROM question;
+
+# 2023-09-27 19:09:40.333774
++DELETE FROM chapter;
+
+# 2023-09-27 19:09:59.957280
++ALTER TABLE chapter ADD CONSTRAINT UNIQUE;
+
+# 2023-09-27 19:13:36.869155
++DELETE FROM answer;
+
+# 2023-09-27 19:13:53.080632
++SELECT * FROM chapter;
+
+# 2023-09-27 19:15:23.256211
++SELECT * FROM question;
+
+# 2023-09-27 19:15:33.112016
++SELECT * FROM answer;
+
+# 2023-09-27 19:15:44.389198
++SELECT COUNT(*) FROM answer;
+
+# 2023-09-27 19:15:50.188464
++\q
+
+# 2023-09-27 19:18:00.548057
++SELECT * FROM chapter;
+
+# 2023-09-27 19:18:50.922963
++ALTER TABLE chapter ADD CONSTRAINT chapter_unique UNIQUE (title);
+
+# 2023-09-27 19:18:58.664687
++\q
+
+# 2023-09-27 21:57:53.266700
++SELECT * FROM answer WHERE correct = True;
+
+# 2023-09-27 21:59:12.308201
++SELECT * FROM answer WHERE question_id = 'da370bc4-abc3-408c-b710-6f2d3b1b1971'
+
+# 2023-09-27 22:00:05.024548
++\q

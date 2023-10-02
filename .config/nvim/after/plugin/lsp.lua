@@ -1,4 +1,15 @@
 local lsp = require("lsp-zero")
+local lspconfig = require("lspconfig")
+
+lspconfig.lua_ls.setup({
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = {'vim'}
+            }
+        }
+    }
+})
 
 lsp.preset("recommended")
 
@@ -11,8 +22,7 @@ lsp.ensure_installed({
 })
 
 local cmp = require("cmp")
-local cmp_select = {behavior = cmp.SelectBehavior.Select}
-local cmp_mappings = lsp.defaults.cmp_mappings({
+local cmp_select = {behavior = cmp.SelectBehavior.Select} local cmp_mappings = lsp.defaults.cmp_mappings({
 	['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
 	['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
 	['<C-y>'] = cmp.mapping.confirm({select = true}),
@@ -37,8 +47,10 @@ end)
 lsp.set_preferences({
  	sign_icons = {}
 })
+
+
 lsp.setup()
 
 vim.diagnostic.config({
-    virual_text = true
+    virtual_text = true
 })

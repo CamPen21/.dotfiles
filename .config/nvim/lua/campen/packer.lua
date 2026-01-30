@@ -4,7 +4,7 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   use {
-	  'nvim-telescope/telescope.nvim', branch = '0.1.x',
+	  'nvim-telescope/telescope.nvim', version = '*',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {
@@ -13,8 +13,11 @@ return require('packer').startup(function(use)
       priority = 1000,
       opts = {},
   }
-  use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use ('nvim-treesitter/playground')
+  use {
+      'nvim-treesitter/nvim-treesitter', 
+      lazy = false,
+      build = ':TSUpdate'
+  }
   use ('mbbill/undotree')
   use ('tpope/vim-fugitive')
   use {'numToStr/Comment.nvim',
@@ -23,19 +26,11 @@ return require('packer').startup(function(use)
     end
   }
   use {
-	  'VonHeikemen/lsp-zero.nvim',
-	  branch = 'v2.x',
-	  requires = {
-		  -- LSP Support
-		  {'neovim/nvim-lspconfig'},             -- Required
-		  {'williamboman/mason.nvim'},           -- Optional
-		  {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-		  -- Autocompletion
-		  {'hrsh7th/nvim-cmp'},     -- Required
-		  {'hrsh7th/cmp-nvim-lsp'}, -- Required
-		  {'L3MON4D3/LuaSnip'},     -- Required
-	  }
+      'mason-org/mason.nvim'
   }
+  use ('williamboman/mason-lspconfig.nvim') -- Optional
   use ('mfussenegger/nvim-jdtls')
+  use ('hrsh7th/nvim-cmp')
+  use ('hrsh7th/cmp-nvim-lsp')
+  use ('L3MON4D3/LuaSnip')
   end)

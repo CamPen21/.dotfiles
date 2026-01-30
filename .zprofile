@@ -16,3 +16,5 @@ export NVM_DIR=~/.nvm
 if [[ "$OSTYPE" == "darwin"* ]]; then
     source $(brew --prefix nvm)/nvm.sh
 fi
+
+export PATH="$PATH:"/Applications/microchip/xc8/v3.00/bin""

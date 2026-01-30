@@ -42,3 +42,5 @@ source $HOME/.cargo/env
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
     source $HOME/zsh/.osx
 fi
+
+export PATH="$PATH:"/Applications/microchip/xc8/v3.00/bin""
